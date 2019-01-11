@@ -40,6 +40,6 @@ public class AnnotatedPerson {
 
     @Override
     public String toString() {
-        return String.format("%s: %sy.o. %ssm", name, age);
+        return String.format("%s: %sy.o. %ssm", name, age, height);
     }
 }
