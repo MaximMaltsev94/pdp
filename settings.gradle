@@ -1,4 +1,5 @@
 rootProject.name = 'pdp'
 include 'pdp-annotations'
 include 'pdp-annotations-proccessor'
+include 'pdp-enums'
 
