@@ -2,6 +2,19 @@ plugins {
     id 'java'
 }
 
+version = '1.0.0'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
 dependencies {
-    testCompile "junit:junit:${jUnitVersion}"
+    annotationProcessor("pdp:pdp-annotations-proccessor:1.0.0")
+    implementation("pdp:pdp-annotations-proccessor:1.0.0")
+    
+    testCompile("junit:junit:${jUnitVersion}")
 }

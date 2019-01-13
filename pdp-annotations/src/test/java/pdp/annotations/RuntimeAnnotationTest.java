@@ -1,8 +1,10 @@
 package pdp.annotations;
 
 import org.junit.Test;
+import org.junit.experimental.theories.suppliers.TestedOn;
 import pdp.annotations.factory.InjectIntegerAnnotationsProceedingFactory;
 import pdp.annotations.objects.AnnotatedPerson;
+import pdp.annotations.objects.WrongCompileClass;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
