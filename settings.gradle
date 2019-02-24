@@ -4,4 +4,5 @@ include 'pdp-annotations-proccessor'
 include 'pdp-enums'
 include 'pdp-io'
 include 'pdp-multithreading-classic'
+include 'pdp-multithreading-advanced'
 
