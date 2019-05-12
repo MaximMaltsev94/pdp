@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <display-name>Chaos Monkey Emulator</display-name>
+
+    <listener>
+        <listener-class>pdp.servlets.ChaosMonkeyContextAttributeListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>chaosMonkeyFilter</filter-name>
+        <filter-class>pdp.servlets.ChaosMonkeyFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>chaosMonkeyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>chaosMonkeyServlet</servlet-name>
+        <servlet-class>pdp.servlets.ChaosMonkeyServlet</servlet-class>
+        <init-param>
+            <param-name>testServletParam</param-name>
+            <param-value>testServletValue</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>chaosMonkeyServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>testContextParam</param-name>
+        <param-value>testContextValue</param-value>
+    </context-param>
+
+
+</web-app>

@@ -9,5 +9,5 @@ public class WrongCompileClass {
     private int field3;
     private int field4;
     private int field5;
-    private int field6;
+//    private int field6;
 }

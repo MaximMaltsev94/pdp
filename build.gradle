@@ -1,15 +1,11 @@
-plugins {
-    id 'java'
-    id 'maven-publish'
-}
-
 ext {
     jUnitVersion = '4.12'
 }
 
-allprojects {
-    apply plugin:'maven-publish'
-    
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+
     group = 'pdp'
 
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -20,9 +16,4 @@ allprojects {
         mavenLocal()
         jcenter()
     }
-}
-
-subprojects {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
 }
