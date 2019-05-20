@@ -1,0 +1,33 @@
+plugins {
+    id 'war'
+    id "com.bmuschko.tomcat" version "2.5"
+    id "com.moowork.node" version "1.2.0"
+}
+
+version '1.0.0'
+
+ext {
+    tomcatVersion = '8.0.42'
+}
+
+dependencies {
+    testCompile("junit:junit:${jUnitVersion}")
+    compile 'org.glassfish.jersey.core:jersey-client:2.28'
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.28'
+    compile 'org.glassfish.jersey.inject:jersey-hk2:2.28'
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.28'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
+
+
+    compileOnly group: 'javax', name: 'javaee-api', version: '8.0.1'
+
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}"
+    tomcat "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}"
+    tomcat "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+}
+
+
+tomcat {
+    httpPort = 8080
+    contextPath = '/'
+}

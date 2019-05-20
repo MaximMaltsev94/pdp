@@ -6,4 +6,5 @@ include 'pdp-io'
 include 'pdp-multithreading-classic'
 include 'pdp-multithreading-advanced'
 include 'pdp-servlets'
+include 'pdp-rest'
 
